@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫龍 Purple Dragon — Omakase · Cologne</title>
+<meta name="description" content="Purple Dragon — a two-Michelin-star omakase sushi counter in the heart of Cologne. Ten seats, twenty courses, one unforgettable evening.">
+<meta name="theme-color" content="#030304">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23030304'/%3E%3Ccircle cx='32' cy='32' r='25' fill='none' stroke='%237C3AED' stroke-width='2.5' stroke-linecap='round' stroke-dasharray='135 22' transform='rotate(-125 32 32)'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23A78BFA' font-family='serif'%3E龍%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="紫龍 Purple Dragon — Omakase · Cologne">
+<meta property="og:description" content="A two-Michelin-star omakase sushi counter in the heart of Cologne. Ten seats, twenty courses, one unforgettable evening.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=1200&h=630&fit=crop&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{bg:'#030304',surface:'#0A0A0C',card:'#08080A','dp':'#7C3AED','dd':'#4C1D95','dl':'#A78BFA','dg':'#8B5CF6','gold':'#D4A843','gl':'#F5DEB3','gd':'#A07D2E',},fontFamily:{sans:['Inter','sans-serif'],serif:['Noto Serif JP','Playfair Display','serif'],display:['Playfair Display','serif'],}}}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#030304;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#030304}::-webkit-scrollbar-thumb{background:#7C3AED;border-radius:3px}
+@keyframes heroClip{0%{clip-path:inset(0 100% 0 0)}100%{clip-path:inset(0 0% 0 0)}}
+.hc{animation:heroClip 1.6s cubic-bezier(.16,1,.3,1) both}.hd1{animation-delay:.4s}.hd2{animation-delay:.7s}.hd3{animation-delay:1s}.hd4{animation-delay:1.3s}
+@keyframes fu{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateY(0)}}
+.fu{animation:fu 1.2s ease-out both}.fd1{animation-delay:1.8s}.fd2{animation-delay:2.1s}.fd3{animation-delay:2.4s}.fd4{animation-delay:2.7s}
+@keyframes goldS{0%{background-position:-200% center}100%{background-position:200% center}}
+.gs{background:linear-gradient(90deg,#D4A843,#F5DEB3,#D4A843,#F5DEB3,#D4A843);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:goldS 5s linear infinite}
+@keyframes df{0%,100%{transform:translate(0,0);opacity:.03}50%{transform:translate(15px,-25px);opacity:.07}}
+.dfl{animation:df 12s ease-in-out infinite}.dfd{animation:df 16s ease-in-out 4s infinite}
+@keyframes enso{0%{stroke-dashoffset:500;opacity:0}15%{opacity:.1}100%{stroke-dashoffset:80;opacity:.1}}
+.ep{stroke-dasharray:500;animation:enso 3.5s ease-out .8s both}
+@keyframes sp{0%{transform:translateY(0);opacity:.3}50%{transform:translateY(8px);opacity:1}}
+.rv{opacity:0;transform:translateY(40px);filter:blur(6px);transition:all 1.2s cubic-bezier(.16,1,.3,1)}.rv.a{opacity:1;transform:translateY(0);filter:blur(0)}
+.rl{opacity:0;transform:translateX(-50px);filter:blur(4px);transition:all 1.2s cubic-bezier(.16,1,.3,1)}.rl.a{opacity:1;transform:translateX(0);filter:blur(0)}
+.rr{opacity:0;transform:translateX(50px);filter:blur(4px);transition:all 1.2s cubic-bezier(.16,1,.3,1)}.rr.a{opacity:1;transform:translateX(0);filter:blur(0)}
+.stg>*:nth-child(1){transition-delay:0ms}.stg>*:nth-child(2){transition-delay:100ms}.stg>*:nth-child(3){transition-delay:200ms}.stg>*:nth-child(4){transition-delay:300ms}.stg>*:nth-child(5){transition-delay:400ms}
+.divider{height:1px;background:linear-gradient(to right,transparent,rgba(124,58,237,.2),rgba(212,168,67,.15),transparent)}
+.nav-scrolled{padding-top:.6rem!important;padding-bottom:.6rem!important;background:rgba(3,3,4,.95)!important;backdrop-filter:blur(24px)!important;border-bottom:1px solid rgba(124,58,237,.08)!important}
+.nl{position:relative}.nl::after{content:'';position:absolute;bottom:-4px;left:50%;width:0;height:1px;background:linear-gradient(to right,transparent,#D4A843,transparent);transition:all .4s;transform:translateX(-50%)}.nl:hover::after{width:80%}
+.cta-g{position:relative;overflow:hidden;background:linear-gradient(135deg,#A07D2E,#D4A843);transition:all .5s cubic-bezier(.16,1,.3,1)}.cta-g::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#D4A843,#F5DEB3);opacity:0;transition:opacity .5s}.cta-g:hover::before{opacity:1}.cta-g:hover{transform:translateY(-2px);box-shadow:0 12px 40px -10px rgba(212,168,67,.4)}.cta-g span{position:relative;z-index:1}
+.ce::after{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,.08);border-radius:50%;transform:translate(-50%,-50%);transition:width .6s,height .6s}.ce:hover::after{width:300px;height:300px}
+@keyframes bg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.bg-glow{background:linear-gradient(135deg,#030304,#1a0a2e,#0f0520,#030304);background-size:400% 400%;animation:bg 8s ease infinite}
+@keyframes pd{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.5}90%{opacity:.5}100%{transform:translateY(-100vh) rotate(360deg);opacity:0}}
+.ptc{position:absolute;border-radius:50%;opacity:0;animation:pd linear infinite;pointer-events:none}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.mt{animation:marquee 35s linear infinite}
+img{opacity:0;transition:opacity .6s}img.ld{opacity:1}
+.mobile-menu{opacity:0;pointer-events:none;transition:all .5s cubic-bezier(.16,1,.3,1);transform:translateX(100%)}.mobile-menu.open{opacity:1;pointer-events:all;transform:translateX(0)}
+.toast{transform:translateY(100px);opacity:0;transition:all .5s cubic-bezier(.16,1,.3,1)}.toast.show{transform:translateY(0);opacity:1}
+.process-line{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(124,58,237,.3),rgba(212,168,67,.2),transparent)}
+.team-card{transition:all .5s cubic-bezier(.16,1,.3,1)}.team-card:hover{transform:translateY(-8px);border-color:rgba(124,58,237,.3);box-shadow:0 20px 60px -15px rgba(124,58,237,.15)}
+/* --- Reservation form fields --- */
+.form-panel{background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.008));border:1px solid rgba(255,255,255,.06);box-shadow:0 30px 80px -40px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.04)}
+.field{width:100%;background-color:rgba(255,255,255,.035);border:1px solid transparent;border-radius:.8rem;padding:.95rem 1.15rem;color:#fff;font-size:.875rem;font-family:inherit;transition:background-color .35s,border-color .35s,box-shadow .35s}
+.field::placeholder{color:#52525b}
+.field:hover{background-color:rgba(255,255,255,.055)}
+.field:focus,.field:focus-visible{outline:none;background-color:rgba(124,58,237,.07);border-color:rgba(124,58,237,.55);box-shadow:0 0 0 4px rgba(124,58,237,.13)}
+.field:focus::placeholder{color:#71717a}
+select.field{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:2.6rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23A78BFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1.05rem center}
+select.field option{background:#0A0A0C;color:#fff}
+.field[type=date]::-webkit-calendar-picker-indicator{filter:invert(.65) sepia(1) saturate(5) hue-rotate(225deg);cursor:pointer;opacity:.65;transition:opacity .3s}
+.field[type=date]:hover::-webkit-calendar-picker-indicator{opacity:1}
+textarea.field{resize:vertical;min-height:5.5rem;line-height:1.6}
+.field-label{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#71717a;font-weight:500;margin-bottom:.45rem;transition:color .3s}
+.field-group:focus-within .field-label{color:#A78BFA}
+/* --- logo enso (#1) --- */
+@keyframes ensoDraw{from{stroke-dashoffset:120}to{stroke-dashoffset:0}}
+.logo-enso{stroke-dasharray:103 17;stroke-dashoffset:0;animation:ensoDraw 1.5s cubic-bezier(.16,1,.3,1) both;transition:filter .5s}
+.group:hover .logo-enso{filter:drop-shadow(0 0 5px rgba(124,58,237,.6))}
+/* --- focus-visible rings (#4) --- */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible{outline:2px solid #A78BFA;outline-offset:3px;border-radius:8px}
+/* --- nav active link (#9) --- */
+.nl.active{color:#fff}.nl.active::after{width:80%}
+/* --- reduced motion (#3) --- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv,.rl,.rr{opacity:1!important;transform:none!important;filter:none!important}
+  #particles,.dfl,.dfd,.mt{display:none!important}
+}
+</style>
+</head>
+<body>
+
+<div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+
+<!-- NAV -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 py-5 px-6 transition-all duration-500 border-b border-transparent" style="background:rgba(3,3,4,.4);backdrop-filter:blur(16px)">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3 group">
+      <span class="relative w-11 h-11 flex items-center justify-center">
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 44 44" fill="none" style="transform:rotate(-125deg)" aria-hidden="true">
+          <circle class="logo-enso" cx="22" cy="22" r="19" stroke="url(#ensoNav)" stroke-width="1.6" stroke-linecap="round"/>
+          <defs><linearGradient id="ensoNav" x1="3" y1="3" x2="41" y2="41" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#D4A843"/></linearGradient></defs>
+        </svg>
+        <span class="font-serif text-dp text-xl leading-none relative" style="text-shadow:0 0 20px rgba(124,58,237,.5)">龍</span>
+      </span>
+      <div class="hidden sm:block">
+        <span class="text-sm font-bold tracking-[.25em] uppercase">Purple Dragon</span>
+        <span class="block text-[8px] tracking-[.35em] text-dl/50 uppercase font-medium">紫龍 · Omakase · Cologne</span>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-10">
+      <a href="#philosophy" class="nl text-[13px] font-medium text-gray-400 hover:text-white transition-colors">Philosophy</a>
+      <a href="#process" class="nl text-[13px] font-medium text-gray-400 hover:text-white transition-colors">The Craft</a>
+      <a href="#team" class="nl text-[13px] font-medium text-gray-400 hover:text-white transition-colors">Team</a>
+      <a href="#location" class="nl text-[13px] font-medium text-gray-400 hover:text-white transition-colors">Find Us</a>
+      <a href="menu.html" target="_blank" class="nl text-[13px] font-medium text-gray-400 hover:text-white transition-colors">Menu</a>
+      <a href="#reserve" class="cta-g px-6 py-2.5 rounded-full ce"><span class="text-[11px] font-bold tracking-[.2em] uppercase text-black">Book a Table</span></a>
+    </div>
+    <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mm" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 relative z-50" onclick="toggleMM()">
+      <span class="w-6 h-[1.5px] bg-white transition-all duration-300" id="m1"></span>
+      <span class="w-6 h-[1.5px] bg-white transition-all duration-300" id="m2"></span>
+      <span class="w-4 h-[1.5px] bg-white transition-all duration-300 ml-auto" id="m3"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mm" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true" class="mobile-menu fixed inset-0 z-40 bg-bg/[.98] backdrop-blur-2xl flex flex-col items-center justify-center gap-8">
+  <a href="#philosophy" onclick="toggleMM()" class="text-3xl font-serif text-white">Philosophy</a>
+  <a href="#process" onclick="toggleMM()" class="text-3xl font-serif text-white">The Craft</a>
+  <a href="#team" onclick="toggleMM()" class="text-3xl font-serif text-white">Team</a>
+  <a href="#location" onclick="toggleMM()" class="text-3xl font-serif text-white">Find Us</a>
+  <a href="menu.html" target="_blank" class="text-3xl font-serif text-white">Menu</a>
+  <a href="#reserve" onclick="toggleMM()" class="mt-4 cta-g px-8 py-3 rounded-full"><span class="text-sm font-bold tracking-[.2em] uppercase text-black">Book a Table</span></a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=1920&h=1080&fit=crop&q=80" alt="" class="w-full h-full object-cover opacity-20" fetchpriority="high" decoding="async" onload="this.classList.add('ld')">
+    <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/60 to-bg"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-bg/80 via-transparent to-bg/80"></div>
+  </div>
+  <svg class="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] z-0" viewBox="0 0 400 400" fill="none">
+    <path class="ep" d="M200 60C110 60,40 140,45 220C50 300,120 360,200 350C280 340,355 280,350 200C345 120,280 65,210 68" stroke="url(#eg)" stroke-width="1.5" stroke-linecap="round"/>
+    <defs><linearGradient id="eg" x1="0" y1="0" x2="400" y2="400"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#D4A843"/></linearGradient></defs>
+  </svg>
+  <div class="absolute top-24 left-[8%] text-[8rem] md:text-[12rem] font-serif text-white dfl select-none pointer-events-none z-0" style="opacity:.025;line-height:1">紫</div>
+  <div class="absolute bottom-[15%] right-[6%] text-[10rem] md:text-[14rem] font-serif text-white dfd select-none pointer-events-none z-0" style="opacity:.02;line-height:1">龍</div>
+  <div class="relative z-10 text-center max-w-5xl px-6">
+    <div class="overflow-hidden mb-6"><p class="text-[10px] md:text-xs tracking-[.5em] uppercase font-medium hc hd1" style="color:#D4A843">✦ Cologne, Germany · Two Michelin Stars ✦</p></div>
+    <div class="overflow-hidden"><h1 class="text-6xl md:text-[8rem] lg:text-[10rem] font-display font-bold leading-[.85] tracking-tighter hc hd2">Purple</h1></div>
+    <div class="overflow-hidden mt-1"><h1 class="text-6xl md:text-[8rem] lg:text-[10rem] font-display italic leading-[.85] tracking-tighter hc hd3"><span class="gs">Dragon</span></h1></div>
+    <div class="overflow-hidden mt-3"><p class="text-base md:text-xl text-gray-400 font-light max-w-xl mx-auto leading-relaxed hc hd4">Where ancient tradition ascends into art.<br class="hidden md:block">An omakase experience beyond imagination.</p></div>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 fu fd1">
+      <a href="#reserve" class="cta-g px-10 py-4 rounded-full ce shadow-lg shadow-gold/10"><span class="text-[12px] font-bold tracking-[.25em] uppercase text-black">Book a Table</span></a>
+      <a href="menu.html" target="_blank" class="px-10 py-4 border border-white/15 text-white text-[12px] font-bold tracking-[.25em] uppercase rounded-full hover:bg-white/5 hover:border-dp/30 transition-all duration-500">Explore Menu</a>
+    </div>
+    <div class="flex items-center justify-center gap-10 mt-16 fu fd2">
+      <div class="text-center"><p class="stat text-3xl md:text-4xl font-display font-bold gs" data-to="10">10</p><p class="text-[9px] tracking-[.25em] uppercase text-gray-600 mt-1">Counter Seats</p></div>
+      <div class="w-px h-10" style="background:linear-gradient(to bottom,transparent,rgba(124,58,237,.3),transparent)"></div>
+      <div class="text-center"><p class="stat text-3xl md:text-4xl font-display font-bold gs" data-to="20">20</p><p class="text-[9px] tracking-[.25em] uppercase text-gray-600 mt-1">Courses</p></div>
+      <div class="w-px h-10" style="background:linear-gradient(to bottom,transparent,rgba(124,58,237,.3),transparent)"></div>
+      <div class="text-center"><p class="stat text-3xl md:text-4xl font-display font-bold gs" data-to="2" data-suffix="★">2★</p><p class="text-[9px] tracking-[.25em] uppercase text-gray-600 mt-1">Michelin</p></div>
+    </div>
+  </div>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 fu fd3">
+    <span class="text-[9px] tracking-[.35em] uppercase text-gray-700">Discover</span>
+    <div class="w-5 h-8 border border-white/10 rounded-full flex justify-center pt-1.5"><div class="w-1 h-2 bg-dp/60 rounded-full" style="animation:sp 2s ease-in-out infinite"></div></div>
+  </div>
+</section>
+
+<!-- ====== PHILOSOPHY ====== -->
+<section id="philosophy" class="py-36 px-6">
+  <div class="max-w-5xl mx-auto text-center rv">
+    <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">紫龍の哲学</span>
+    <h2 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold mt-6 leading-[1.15] tracking-tight">The dragon does not chase —<br><span class="italic text-gray-500">it commands the moment.</span></h2>
+    <p class="text-gray-500 font-light text-lg md:text-xl mt-8 max-w-2xl mx-auto leading-relaxed">At Purple Dragon, we don't just serve sushi — we orchestrate an experience rooted in centuries of Edomae tradition, reimagined for the modern palate. Every grain of rice, every cut of fish, every moment of silence at the counter is intentional.</p>
+  </div>
+</section>
+
+<!-- ====== THREE PILLARS ====== -->
+<section class="py-20 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+    <div class="rl group relative rounded-3xl overflow-hidden border border-white/5 aspect-[3/4] cursor-pointer">
+      <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&h=800&fit=crop&q=80" alt="" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+      <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent"></div>
+      <div class="absolute bottom-8 left-8 right-8">
+        <span class="text-[10px] tracking-[.3em] uppercase font-medium" style="color:#D4A843">Purity</span>
+        <h3 class="text-2xl font-display font-bold mt-2">Only the Finest</h3>
+        <p class="text-sm text-gray-500 mt-2">Fish sourced daily from Tsukiji, flown to Cologne within 18 hours of catch.</p>
+      </div>
+    </div>
+    <div class="rv group relative rounded-3xl overflow-hidden border border-white/5 aspect-[3/4] cursor-pointer" style="transition-delay:150ms">
+      <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&h=800&fit=crop&q=80" alt="" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+      <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent"></div>
+      <div class="absolute bottom-8 left-8 right-8">
+        <span class="text-[10px] tracking-[.3em] uppercase font-medium" style="color:#D4A843">Precision</span>
+        <h3 class="text-2xl font-display font-bold mt-2">The Chef's Hand</h3>
+        <p class="text-sm text-gray-500 mt-2">30 years of discipline. Every nigiri formed in 3 seconds, perfected over a lifetime.</p>
+      </div>
+    </div>
+    <div class="rr group relative rounded-3xl overflow-hidden border border-white/5 aspect-[3/4] cursor-pointer" style="transition-delay:300ms">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=800&fit=crop&q=80" alt="" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+      <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent"></div>
+      <div class="absolute bottom-8 left-8 right-8">
+        <span class="text-[10px] tracking-[.3em] uppercase font-medium" style="color:#D4A843">Intimacy</span>
+        <h3 class="text-2xl font-display font-bold mt-2">The Sanctuary</h3>
+        <p class="text-sm text-gray-500 mt-2">Hinoki counter, 10 seats. A dialogue between chef and guest — nothing between.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider max-w-5xl mx-auto"></div>
+
+<!-- ====== THE PROCESS ====== -->
+<section id="process" class="py-32 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-20 rv">
+      <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">The Craft</span>
+      <h2 class="text-4xl md:text-6xl font-display font-bold tracking-tight mt-4">From Ocean to<br><span class="italic text-dl/60">your plate</span></h2>
+      <p class="text-gray-500 font-light mt-4 max-w-lg mx-auto">Every piece of sushi at Purple Dragon follows a rigorous journey — a process refined over generations.</p>
+    </div>
+    <div class="relative">
+      <div class="process-line hidden md:block"></div>
+      <div class="space-y-24">
+        <!-- Step 1 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center rv">
+          <div class="md:text-right order-2 md:order-1">
+            <span class="text-5xl font-display font-bold text-dp/20">01</span>
+            <h3 class="text-2xl font-display font-bold mt-2">Sourcing & Selection</h3>
+            <p class="text-gray-500 font-light mt-3 leading-relaxed">Before dawn at Tokyo's Toyosu Market, our buyer hand-selects each fish. Bluefin tuna from Hokkaido, uni from Muroran, kampachi from Kyushu — only the top 2% makes the cut. Every specimen is evaluated for fat content, texture, and freshness.</p>
+          </div>
+          <div class="order-1 md:order-2 rounded-2xl overflow-hidden border border-white/5">
+            <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&h=400&fit=crop&q=80" alt="Fish market" class="w-full h-64 object-cover" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center rv">
+          <div class="rounded-2xl overflow-hidden border border-white/5">
+            <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=600&h=400&fit=crop&q=80" alt="Rice preparation" class="w-full h-64 object-cover" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+          </div>
+          <div>
+            <span class="text-5xl font-display font-bold text-dp/20">02</span>
+            <h3 class="text-2xl font-display font-bold mt-2">Shari — The Rice</h3>
+            <p class="text-gray-500 font-light mt-3 leading-relaxed">Our shari is a 40-year recipe. Koshihikari rice from Niigata, cooked in iron pots, seasoned with a blend of Akazu red vinegar, sea salt, and kombu dashi. Each grain must be glossy, firm outside, soft within — seasoned at body temperature, never refrigerated.</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center rv">
+          <div class="md:text-right order-2 md:order-1">
+            <span class="text-5xl font-display font-bold text-dp/20">03</span>
+            <h3 class="text-2xl font-display font-bold mt-2">Nikiri & Aging</h3>
+            <p class="text-gray-500 font-light mt-3 leading-relaxed">Tuna is dry-aged in our dedicated chamber for 24–72 hours. This intensifies umami and deepens color. Each fish receives a different aging profile — ōtoro at 48 hours, akami at 24. The nikiri sauce is our own blend of soy, mirin, and sake, reduced over 3 days.</p>
+          </div>
+          <div class="order-1 md:order-2 rounded-2xl overflow-hidden border border-white/5">
+            <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=600&h=400&fit=crop&q=80" alt="Knife work" class="w-full h-64 object-cover" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center rv">
+          <div class="rounded-2xl overflow-hidden border border-white/5">
+            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&h=400&fit=crop&q=80" alt="Assembly" class="w-full h-64 object-cover" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+          </div>
+          <div>
+            <span class="text-5xl font-display font-bold text-dp/20">04</span>
+            <h3 class="text-2xl font-display font-bold mt-2">Cutting & Formation</h3>
+            <p class="text-gray-500 font-light mt-3 leading-relaxed">With a Yanagiba knife sharpened to a mirror edge, Chef Tanaka cuts each piece at a precise angle determined by the fish's fat line and muscle structure. The nigiri is formed in one fluid motion — rice compressed in 3 seconds, fish draped with a single stroke. No squeezing, no hesitation.</p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center rv">
+          <div class="md:text-right order-2 md:order-1">
+            <span class="text-5xl font-display font-bold text-dp/20">05</span>
+            <h3 class="text-2xl font-display font-bold mt-2">The Moment of Serving</h3>
+            <p class="text-gray-500 font-light mt-3 leading-relaxed">Sushi is alive — it deteriorates the moment it leaves the chef's hand. That's why each piece is placed directly before you, one at a time. The timing between courses, the temperature, the wasabi placement under the fish — everything is calculated for peak flavor at the exact second you eat.</p>
+          </div>
+          <div class="order-1 md:order-2 rounded-2xl overflow-hidden border border-white/5">
+            <img src="https://images.unsplash.com/photo-1615361200098-9e630ec29b4e?w=600&h=400&fit=crop&q=80" alt="Serving" class="w-full h-64 object-cover" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider max-w-5xl mx-auto"></div>
+
+<!-- ====== THE TEAM ====== -->
+<section id="team" class="py-32 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 rv">
+      <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">The People</span>
+      <h2 class="text-4xl md:text-6xl font-display font-bold tracking-tight mt-4">Behind the<br><span class="italic text-dl/60">counter</span></h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stg">
+      <div class="team-card rv rounded-2xl border border-white/5 bg-card overflow-hidden">
+        <div class="h-72 overflow-hidden"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=500&fit=crop&q=80" alt="Chef Tanaka" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" decoding="async" onload="this.classList.add('ld')"></div>
+        <div class="p-5">
+          <h4 class="font-display font-bold text-lg">Tanaka Hiroshi</h4>
+          <p class="text-[10px] tracking-[.2em] uppercase text-dl/60 mt-0.5">Executive Chef · Itamae</p>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">30 years at the counter. Trained in Tokyo's Ginza district under three generations of sushi masters.</p>
+        </div>
+      </div>
+      <div class="team-card rv rounded-2xl border border-white/5 bg-card overflow-hidden">
+        <div class="h-72 overflow-hidden"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop&q=80" alt="Sous Chef" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" decoding="async" onload="this.classList.add('ld')"></div>
+        <div class="p-5">
+          <h4 class="font-display font-bold text-lg">Müller Anna</h4>
+          <p class="text-[10px] tracking-[.2em] uppercase text-dl/60 mt-0.5">Sous Chef</p>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">Formerly of Nobelhart & Schmutzig. The bridge between Japanese precision and European sensibility.</p>
+        </div>
+      </div>
+      <div class="team-card rv rounded-2xl border border-white/5 bg-card overflow-hidden">
+        <div class="h-72 overflow-hidden"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop&q=80" alt="Sommelier" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" decoding="async" onload="this.classList.add('ld')"></div>
+        <div class="p-5">
+          <h4 class="font-display font-bold text-lg">Weber Lukas</h4>
+          <p class="text-[10px] tracking-[.2em] uppercase text-dl/60 mt-0.5">Sake Sommelier</p>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">Certified Kikisake-shi. Curates our 80-label sake list from every region of Japan.</p>
+        </div>
+      </div>
+      <div class="team-card rv rounded-2xl border border-white/5 bg-card overflow-hidden">
+        <div class="h-72 overflow-hidden"><img src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=400&h=500&fit=crop&q=80" alt="Pastry" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" decoding="async" onload="this.classList.add('ld')"></div>
+        <div class="p-5">
+          <h4 class="font-display font-bold text-lg">Sato Yuki</h4>
+          <p class="text-[10px] tracking-[.2em] uppercase text-dl/60 mt-0.5">Wagashi & Dessert</p>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">Trained in Kyoto wagashi artistry. Creates seasonal Japanese sweets that close the omakase journey.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider max-w-5xl mx-auto"></div>
+
+<!-- ====== HOW WE OPERATE ====== -->
+<section class="py-32 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+    <div class="rl">
+      <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">Our Way</span>
+      <h2 class="text-4xl md:text-5xl font-display font-bold tracking-tight leading-[1.1] mt-4">How we<br><span class="italic text-dl/60">operate</span></h2>
+      <div class="mt-10 space-y-6">
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-lg bg-dp/10 border border-dp/20 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-dl text-lg" data-icon="mdi:airplane"></span></div>
+          <div><h4 class="font-display font-semibold">Daily Imports</h4><p class="text-sm text-gray-500 mt-1">Fish arrives at Cologne-Bonn Airport daily from Tokyo's Toyosu Market. 18 hours from ocean to our door.</p></div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-lg bg-dp/10 border border-dp/20 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-dl text-lg" data-icon="mdi:leaf"></span></div>
+          <div><h4 class="font-display font-semibold">Sustainable Sourcing</h4><p class="text-sm text-gray-500 mt-1">We partner only with MSC-certified fisheries. No endangered species. Full traceability for every piece served.</p></div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-lg bg-dp/10 border border-dp/20 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-dl text-lg" data-icon="mdi:account-group"></span></div>
+          <div><h4 class="font-display font-semibold">One Seating Per Night</h4><p class="text-sm text-gray-500 mt-1">We serve one omakase seating per evening. No rush, no turnover. The evening unfolds at its own pace.</p></div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-lg bg-dp/10 border border-dp/20 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-dl text-lg" data-icon="mdi:silverware-fork-knife"></span></div>
+          <div><h4 class="font-display font-semibold">No Walk-Ins</h4><p class="text-sm text-gray-500 mt-1">Every guest is expected. This allows us to prepare specifically for you — dietary needs, preferences, celebrations.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="rr relative">
+      <div class="rounded-3xl overflow-hidden border border-white/5">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&h=900&fit=crop&q=80" alt="Interior" class="w-full h-[550px] object-cover" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+        <div class="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent rounded-3xl"></div>
+      </div>
+      <div class="absolute -top-3 -right-3 w-20 h-20 border-t border-r border-dp/20 rounded-tr-3xl"></div>
+      <div class="absolute -bottom-3 -left-3 w-20 h-20 border-b border-l border-gold/20 rounded-bl-3xl"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BOOKING CTA ====== -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto bg-glow rounded-3xl border border-dp/10 p-12 md:p-20 text-center relative overflow-hidden rv">
+    <div class="absolute top-0 left-0 w-40 h-40 bg-dp/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-60 h-60 bg-gold/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-8 right-12 text-7xl font-serif text-white dfl select-none pointer-events-none" style="opacity:.03">龍</div>
+    <div class="relative z-10">
+      <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">Reservation</span>
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mt-4 leading-[1.05]">Your seat awaits at the<br><span class="italic gs">dragon's table</span></h2>
+      <p class="text-gray-500 font-light mt-6 max-w-lg mx-auto">Only 10 counter seats per evening. One seating. One unforgettable journey through 20 courses.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <a href="#reserve" class="cta-g px-12 py-5 rounded-full ce shadow-lg shadow-gold/15"><span class="text-[12px] font-bold tracking-[.25em] uppercase text-black">Book a Table Now</span></a>
+        <a href="menu.html" target="_blank" class="px-12 py-5 border border-white/15 text-white text-[12px] font-bold tracking-[.25em] uppercase rounded-full hover:bg-white/5 hover:border-dp/40 hover:-translate-y-0.5 transition-all duration-500">View Full Menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== LOCATION ====== -->
+<section id="location" class="py-32 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div class="rv relative rounded-3xl overflow-hidden border border-white/5 h-[450px]">
+      <img src="https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=800&h=600&fit=crop&q=80" alt="Cologne" class="w-full h-full object-cover" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+      <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent"></div>
+      <div class="absolute bottom-6 left-6 right-6">
+        <div class="bg-black/50 backdrop-blur-xl rounded-xl p-4 border border-white/5">
+          <p class="text-[10px] tracking-[.2em] uppercase text-dl/60">Location</p>
+          <p class="font-display font-bold text-lg mt-1">Cologne, Germany</p>
+        </div>
+      </div>
+    </div>
+    <div class="rr">
+      <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">Find Us</span>
+      <h2 class="text-4xl md:text-5xl font-display font-bold tracking-tight mt-4">In the heart of<br><span class="italic text-dl/60">the Rhineland</span></h2>
+      <div class="mt-10 space-y-5">
+        <div class="flex gap-4 items-start">
+          <span class="iconify text-dl text-xl mt-0.5" data-icon="mdi:map-marker"></span>
+          <div><p class="font-medium">Address</p><p class="text-sm text-gray-500 mt-0.5">Brüsseler Platz 7, 50672 Cologne, Germany</p></div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span class="iconify text-dl text-xl mt-0.5" data-icon="mdi:clock-outline"></span>
+          <div><p class="font-medium">Hours</p>
+            <div class="text-sm text-gray-500 mt-0.5 space-y-0.5">
+              <p>Tue – Thu: 6:00 PM – 10:00 PM</p>
+              <p>Fri – Sat: 5:30 PM – 11:00 PM</p>
+              <p>Sunday: 5:00 PM – 9:00 PM</p>
+              <p>Monday: <span class="text-dp">Closed</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span class="iconify text-dl text-xl mt-0.5" data-icon="mdi:phone"></span>
+          <div><p class="font-medium">Contact</p><p class="text-sm text-gray-500 mt-0.5">+49 221 123 4567 · hello@purpledragon.de</p></div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span class="iconify text-dl text-xl mt-0.5" data-icon="mdi:train"></span>
+          <div><p class="font-medium">Getting Here</p><p class="text-sm text-gray-500 mt-0.5">2 min from Rudolfplatz U-Bahn · 15 min from Köln Hbf by taxi</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ACCOLADES ====== -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 rv">
+    <div class="text-center"><p class="text-3xl md:text-4xl font-display font-bold text-white/80">2★</p><p class="text-[10px] tracking-[.2em] uppercase text-gray-600 mt-1">Michelin Guide</p></div>
+    <div class="text-center"><p class="text-3xl md:text-4xl font-display font-bold text-white/80">#1</p><p class="text-[10px] tracking-[.2em] uppercase text-gray-600 mt-1">Germany's Best Sushi</p></div>
+    <div class="text-center"><p class="text-3xl md:text-4xl font-display font-bold text-white/80">4.9</p><p class="text-[10px] tracking-[.2em] uppercase text-gray-600 mt-1">Google Reviews</p></div>
+    <div class="text-center"><p class="text-3xl md:text-4xl font-display font-bold text-white/80">19pts</p><p class="text-[10px] tracking-[.2em] uppercase text-gray-600 mt-1">Gault&Millau</p></div>
+  </div>
+</section>
+
+<!-- ====== RESERVATION FORM ====== -->
+<section id="reserve" class="py-32 px-6 relative">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=800&fit=crop&q=80" alt="" class="w-full h-full object-cover opacity-[.08]" loading="lazy" decoding="async" onload="this.classList.add('ld')">
+    <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/90 to-bg"></div>
+  </div>
+  <div class="max-w-4xl mx-auto relative z-10">
+    <div class="text-center mb-14 rv">
+      <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">予約</span>
+      <h2 class="text-4xl md:text-6xl font-display font-bold tracking-tight mt-4">Reserve Your Seat</h2>
+      <p class="text-gray-500 font-light mt-4">We'll confirm your reservation within 24 hours.</p>
+    </div>
+    <form onsubmit="handleReserve(event)" class="form-panel grid grid-cols-1 md:grid-cols-2 gap-5 rv rounded-3xl p-6 sm:p-8 md:p-10">
+      <div class="field-group"><label class="field-label">Full Name *</label><input type="text" required class="field" placeholder="Your name"></div>
+      <div class="field-group"><label class="field-label">Email *</label><input type="email" required class="field" placeholder="your@email.com"></div>
+      <div class="field-group"><label class="field-label">Date *</label><input type="date" required class="field"></div>
+      <div class="field-group"><label class="field-label">Guests *</label><select required class="field"><option value="">Select</option><option value="1">1 Guest</option><option value="2">2 Guests</option><option value="3">3 Guests</option><option value="4">4 Guests</option></select></div>
+      <div class="field-group"><label class="field-label">Experience *</label><select required class="field"><option value="">Choose</option><option value="omakase">Omakase — €220/guest</option><option value="premium">Purple Dragon Omakase — €340/guest</option><option value="ala">À La Carte</option></select></div>
+      <div class="field-group"><label class="field-label">Phone</label><input type="tel" class="field" placeholder="+49 ___ ___"></div>
+      <div class="md:col-span-2 field-group"><label class="field-label">Special Requests</label><textarea rows="3" class="field" placeholder="Allergies, celebrations, dietary needs..."></textarea></div>
+      <div class="md:col-span-2 text-center pt-2">
+        <button type="submit" class="cta-g px-14 py-4 rounded-full ce shadow-lg shadow-gold/15"><span class="text-[12px] font-bold tracking-[.25em] uppercase text-black">Confirm Reservation</span></button>
+        <p class="text-[10px] text-gray-700 mt-4">Confirmation within 24h · Free cancellation up to 24h before</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="border-t border-white/5 py-16 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="relative w-10 h-10 flex items-center justify-center">
+          <svg class="absolute inset-0 w-full h-full" viewBox="0 0 44 44" fill="none" style="transform:rotate(-125deg)" aria-hidden="true">
+            <circle cx="22" cy="22" r="19" stroke="url(#ensoFoot)" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="103 17"/>
+            <defs><linearGradient id="ensoFoot" x1="3" y1="3" x2="41" y2="41" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#D4A843"/></linearGradient></defs>
+          </svg>
+          <span class="font-serif text-dp text-lg relative">龍</span>
+        </span>
+        <span class="text-sm font-bold tracking-[.25em] uppercase">Purple Dragon</span>
+      </div>
+      <p class="text-sm text-gray-600 font-light leading-relaxed max-w-sm">A sanctuary for sushi purists in the heart of Cologne. Every grain of rice, every slice of fish — crafted with intention and reverence.</p>
+      <div class="flex gap-4 mt-6">
+        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-dp/50 hover:bg-dp/10 transition-all"><span class="iconify text-gray-500 text-lg" data-icon="mdi:instagram"></span></a>
+        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-dp/50 hover:bg-dp/10 transition-all"><span class="iconify text-gray-500 text-lg" data-icon="mdi:facebook"></span></a>
+        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-dp/50 hover:bg-dp/10 transition-all"><span class="iconify text-gray-500 text-lg" data-icon="mdi:google"></span></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-[10px] tracking-[.3em] uppercase text-gray-500 font-bold mb-4">Navigate</h4>
+      <div class="space-y-3 text-sm text-gray-600">
+        <a href="#philosophy" class="block hover:text-dl transition-colors">Philosophy</a>
+        <a href="#process" class="block hover:text-dl transition-colors">The Craft</a>
+        <a href="#team" class="block hover:text-dl transition-colors">Team</a>
+        <a href="#location" class="block hover:text-dl transition-colors">Find Us</a>
+        <a href="menu.html" target="_blank" class="block hover:text-dl transition-colors">Menu →</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-[10px] tracking-[.3em] uppercase text-gray-500 font-bold mb-4">Contact</h4>
+      <div class="space-y-3 text-sm text-gray-600">
+        <p>Brüsseler Platz 7</p><p>50672 Cologne, Germany</p>
+        <p class="text-gray-400">+49 221 123 4567</p>
+        <p class="text-gray-400">hello@purpledragon.de</p>
+      </div>
+    </div>
+  </div>
+  <div class="divider mb-8"></div>
+  <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-[11px] text-gray-700">© 2025 Purple Dragon GmbH. All rights reserved.</p>
+    <p class="text-[11px] text-gray-800 font-serif">「魚を食うは命を食う」</p>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast" class="toast fixed bottom-8 left-1/2 -translate-x-1/2 z-[110] px-6 py-4 bg-card border border-dp/30 rounded-2xl flex items-center gap-3 shadow-2xl">
+  <span class="iconify text-dl text-xl" data-icon="mdi:check-circle"></span>
+  <span id="toastMsg" class="text-sm font-medium"></span>
+</div>
+
+<script>
+// Particles
+(function(){const c=document.getElementById('particles');for(let i=0;i<12;i++){const p=document.createElement('div');p.className='ptc';p.style.left=Math.random()*100+'%';p.style.animationDuration=(10+Math.random()*15)+'s';p.style.animationDelay=Math.random()*10+'s';const s=2+Math.random()*3;p.style.width=s+'px';p.style.height=s+'px';p.style.background=Math.random()>.5?'#7C3AED':'#D4A843';c.appendChild(p)}})();
+
+// Nav scroll
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('nav-scrolled',scrollY>80),{passive:true});
+
+// Mobile menu (accessible: aria, Esc, focus, scroll-lock)
+let mmOpen=false;
+const ham=document.getElementById('hamburger');
+function toggleMM(){
+  mmOpen=!mmOpen;
+  const m=document.getElementById('mm');
+  m.classList.toggle('open',mmOpen);
+  m.setAttribute('aria-hidden',String(!mmOpen));
+  ham.setAttribute('aria-expanded',String(mmOpen));
+  ham.setAttribute('aria-label',mmOpen?'Close menu':'Open menu');
+  document.body.style.overflow=mmOpen?'hidden':'';
+  document.getElementById('m1').style.transform=mmOpen?'rotate(45deg) translate(4px,4px)':'';
+  document.getElementById('m2').style.opacity=mmOpen?'0':'1';
+  document.getElementById('m3').style.transform=mmOpen?'rotate(-45deg) translate(4px,-4px)':'';
+  document.getElementById('m3').style.width=mmOpen?'1.5rem':'1rem';
+  if(mmOpen)m.querySelector('a').focus(); else ham.focus();
+}
+addEventListener('keydown',e=>{if(e.key==='Escape'&&mmOpen)toggleMM()});
+
+// Scroll reveal — IntersectionObserver (#7)
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('a');io.unobserve(en.target)}}),{rootMargin:'0px 0px -80px 0px'});
+document.querySelectorAll('.rv,.rl,.rr').forEach(e=>io.observe(e));
+
+// Scroll-spy nav highlight (#9)
+const navLinks=[...document.querySelectorAll('.nl[href^="#"]')];
+const spy=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const id='#'+en.target.id;navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')===id))}}),{rootMargin:'-45% 0px -50% 0px'});
+['philosophy','process','team','location'].forEach(id=>{const s=document.getElementById(id);if(s)spy.observe(s)});
+
+// Hero stat counters (#10) — count up once on view
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const stats=[...document.querySelectorAll('.stat')];
+if(!reduce)stats.forEach(s=>s.textContent='0'+(s.dataset.suffix||''));
+const cio=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target)}}),{threshold:.6});
+stats.forEach(s=>cio.observe(s));
+function countUp(el){
+  const to=+el.dataset.to,suf=el.dataset.suffix||'';
+  if(reduce){el.textContent=to+suf;return;}
+  const dur=1400,t0=performance.now();
+  requestAnimationFrame(function tick(now){
+    const p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(to*e)+suf;
+    if(p<1)requestAnimationFrame(tick);
+  });
+}
+
+// Toast
+function showToast(m){const t=document.getElementById('toast');document.getElementById('toastMsg').textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000)}
+
+// Reserve
+function handleReserve(e){e.preventDefault();showToast('Reservation submitted! Check your email for confirmation.');e.target.reset()}
+
+// Card tilt
+document.querySelectorAll('.team-card').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;const rx=(y-r.height/2)/25,ry=(r.width/2-x)/25;c.style.transform=`translateY(-8px) perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg)`});c.addEventListener('mouseleave',()=>{c.style.transform=''})});
+</script>
+</body>
+</html>

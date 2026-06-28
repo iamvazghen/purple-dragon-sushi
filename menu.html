@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — 紫龍 Purple Dragon</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{bg:'#030304',surface:'#0A0A0C',card:'#08080A','dp':'#7C3AED','dd':'#4C1D95','dl':'#A78BFA','dg':'#8B5CF6','gold':'#D4A843','gl':'#F5DEB3','gd':'#A07D2E','matcha':'#4A7C59','yuzu':'#FFF176',},fontFamily:{sans:['Inter','sans-serif'],serif:['Noto Serif JP','Playfair Display','serif'],display:['Playfair Display','serif'],}}}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:#030304;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#030304}::-webkit-scrollbar-thumb{background:#7C3AED;border-radius:3px}
+@keyframes pageIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+body{animation:pageIn .8s cubic-bezier(.16,1,.3,1) both}
+.rv{opacity:0;transform:translateY(40px);filter:blur(6px);transition:all 1.2s cubic-bezier(.16,1,.3,1)}.rv.a{opacity:1;transform:translateY(0);filter:blur(0)}
+.stg>*:nth-child(1){transition-delay:0ms}.stg>*:nth-child(2){transition-delay:80ms}.stg>*:nth-child(3){transition-delay:160ms}.stg>*:nth-child(4){transition-delay:240ms}.stg>*:nth-child(5){transition-delay:320ms}.stg>*:nth-child(6){transition-delay:400ms}.stg>*:nth-child(7){transition-delay:480ms}.stg>*:nth-child(8){transition-delay:560ms}
+.divider{height:1px;background:linear-gradient(to right,transparent,rgba(124,58,237,.2),rgba(212,168,67,.15),transparent)}
+.nav-scrolled{padding-top:.6rem!important;padding-bottom:.6rem!important;background:rgba(3,3,4,.95)!important;backdrop-filter:blur(24px)!important;border-bottom:1px solid rgba(124,58,237,.08)!important}
+.mc{position:relative;overflow:hidden;transition:all .5s cubic-bezier(.16,1,.3,1)}.mc::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(124,58,237,.06),transparent);transition:left .7s;z-index:2;pointer-events:none}.mc:hover::before{left:100%}.mc:hover{transform:translateY(-8px);box-shadow:0 20px 60px -15px rgba(124,58,237,.25);border-color:rgba(124,58,237,.3)}.mc .ci{transition:transform .7s cubic-bezier(.16,1,.3,1)}.mc:hover .ci{transform:scale(1.08)}
+.dc{position:relative;transition:all .5s cubic-bezier(.16,1,.3,1)}.dc:hover{transform:translateY(-6px) scale(1.02)}.dc .gw{position:absolute;inset:-1px;border-radius:1.5rem;opacity:0;transition:opacity .5s;z-index:-1}.dc:hover .gw{opacity:1}
+.ct{position:relative;padding:.6rem 1.2rem;cursor:pointer;transition:all .4s;border:1px solid transparent;border-radius:9999px;font-size:.8rem;white-space:nowrap}.ct.active{background:rgba(124,58,237,.12);border-color:rgba(124,58,237,.3);color:#A78BFA}
+.bp{background:linear-gradient(135deg,#7C3AED,#A78BFA)}.bc{background:linear-gradient(135deg,#D4A843,#F5DEB3);color:#000}.bn{background:linear-gradient(135deg,#00E5FF,#0091FF);color:#000}
+.hscroll::-webkit-scrollbar{height:3px}.hscroll::-webkit-scrollbar-track{background:transparent}.hscroll::-webkit-scrollbar-thumb{background:rgba(124,58,237,.2);border-radius:2px}
+img{opacity:0;transition:opacity .6s}img.ld{opacity:1}
+.mo{opacity:0;pointer-events:none;transition:opacity .4s}.mo.open{opacity:1;pointer-events:all}
+.mb{transform:scale(.92) translateY(20px);transition:transform .5s cubic-bezier(.16,1,.3,1)}.mo.open .mb{transform:scale(1) translateY(0)}
+.toast{transform:translateY(100px);opacity:0;transition:all .5s cubic-bezier(.16,1,.3,1)}.toast.show{transform:translateY(0);opacity:1}
+@keyframes goldS{0%{background-position:-200% center}100%{background-position:200% center}}.gs{background:linear-gradient(90deg,#D4A843,#F5DEB3,#D4A843,#F5DEB3,#D4A843);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:goldS 5s linear infinite}
+.cta-g{position:relative;overflow:hidden;background:linear-gradient(135deg,#A07D2E,#D4A843);transition:all .5s cubic-bezier(.16,1,.3,1)}.cta-g::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#D4A843,#F5DEB3);opacity:0;transition:opacity .5s}.cta-g:hover::before{opacity:1}.cta-g:hover{transform:translateY(-2px);box-shadow:0 12px 40px -10px rgba(212,168,67,.4)}.cta-g span{position:relative;z-index:1}
+/* --- UX/a11y polish (Hallmark pass) --- */
+:focus-visible{outline:2px solid #A78BFA;outline-offset:3px;border-radius:8px}
+.mc{outline-offset:-2px}
+.mc:focus-visible{outline:2px solid #A78BFA}
+.mc.hide{opacity:0;transform:scale(.96);pointer-events:none}
+#count{font-variant-numeric:tabular-nums}
+.scrim{box-shadow:0 14px 14px -14px rgba(3,3,4,.9)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1!important;transform:none!important;filter:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 py-5 px-6 transition-all duration-500 border-b border-transparent" style="background:rgba(3,3,4,.4);backdrop-filter:blur(16px)">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-11 h-11 rounded-full border border-dp/40 flex items-center justify-center group-hover:border-dp/80 transition-all duration-500"><span class="font-serif text-dp text-xl leading-none" style="text-shadow:0 0 20px rgba(124,58,237,.5)">龍</span></div>
+      <div class="hidden sm:block"><span class="text-sm font-bold tracking-[.25em] uppercase">Purple Dragon</span><span class="block text-[8px] tracking-[.35em] text-dl/50 uppercase font-medium">紫龍 · Menu</span></div>
+    </a>
+    <div class="flex items-center gap-6">
+      <a href="index.html" class="text-[13px] font-medium text-gray-400 hover:text-white transition-colors hidden sm:inline">← Back to Home</a>
+      <a href="index.html#reserve" class="cta-g px-6 py-2.5 rounded-full"><span class="text-[11px] font-bold tracking-[.2em] uppercase text-black">Book a Table</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- MENU HERO -->
+<section class="pt-32 pb-12 px-6">
+  <div class="max-w-7xl mx-auto text-center rv">
+    <span class="text-[10px] tracking-[.5em] uppercase font-medium" style="color:#D4A843">紫龍の料理</span>
+    <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight mt-4">The Menu</h1>
+    <p class="text-gray-500 font-light mt-4 max-w-xl mx-auto">Every category of sushi, curated teas, beers, and Japanese lemonades — the full breadth of our craft. Tap any dish to learn more.</p>
+  </div>
+</section>
+
+<!-- TABS -->
+<div id="tabbar" class="sticky top-0 z-30 bg-bg/90 backdrop-blur-xl border-y border-white/5 py-3 px-6 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto flex items-center gap-4">
+    <div role="tablist" aria-label="Menu categories" class="flex gap-2 overflow-x-auto hscroll pb-1 flex-1">
+      <button role="tab" aria-selected="true" aria-controls="grid" class="ct active text-gray-500" data-cat="all">All</button>
+      <button role="tab" aria-selected="false" aria-controls="grid" class="ct text-gray-500" data-cat="nigiri">Nigiri</button>
+      <button role="tab" aria-selected="false" aria-controls="grid" class="ct text-gray-500" data-cat="sashimi">Sashimi</button>
+      <button role="tab" aria-selected="false" aria-controls="grid" class="ct text-gray-500" data-cat="maki">Maki</button>
+      <button role="tab" aria-selected="false" aria-controls="grid" class="ct text-gray-500" data-cat="gunkan">Gunkan</button>
+      <button role="tab" aria-selected="false" aria-controls="grid" class="ct text-gray-500" data-cat="tea">Tea</button>
+      <button role="tab" aria-selected="false" aria-controls="grid" class="ct text-gray-500" data-cat="beer">Beer</button>
+      <button role="tab" aria-selected="false" aria-controls="grid" class="ct text-gray-500" data-cat="lemonade">Lemonade</button>
+    </div>
+    <span id="count" aria-live="polite" class="hidden md:block text-[11px] tracking-[.15em] uppercase text-gray-600 whitespace-nowrap shrink-0">24 dishes</span>
+  </div>
+</div>
+
+<!-- MENU GRID -->
+<section class="py-12 px-6">
+  <div id="grid" class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 stg">
+
+    <!-- ===== NIGIRI ===== -->
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="nigiri" data-name="Ōtoro" data-jp="大トロ" data-price="€18 / pc" data-img="https://images.unsplash.com/photo-1615361200098-9e630ec29b4e?w=700&h=420&fit=crop&q=80" data-detail="The crown of the bluefin — the fattiest cut of the belly, marbled like snow. It dissolves on the tongue at body temperature, finished only with a brush of our three-day nikiri." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1615361200098-9e630ec29b4e?w=500&h=400&fit=crop&q=80" alt="Ōtoro" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bc absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">Chef's Pick</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Ōtoro</h3><span class="text-[11px] text-dl/60 font-serif">大トロ</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€18</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Fattiest bluefin tuna belly, snow-marbled, melts on contact.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="nigiri" data-name="Chūtoro" data-jp="中トロ" data-price="€14 / pc" data-img="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=700&h=420&fit=crop&q=80" data-detail="The balance point of the tuna — medium-fatty, where richness meets the clean iron of the akami. Aged 48 hours for depth." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=500&h=400&fit=crop&q=80" alt="Chūtoro" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Chūtoro</h3><span class="text-[11px] text-dl/60 font-serif">中トロ</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€14</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Medium-fatty tuna — richness balanced with clean iron.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="nigiri" data-name="Akami" data-jp="赤身" data-price="€9 / pc" data-img="https://images.unsplash.com/photo-1607301406259-dfb186e15de8?w=700&h=420&fit=crop&q=80" data-detail="The lean ruby loin of the bluefin, lightly marinated in zuke soy. Pure, muscular tuna flavour — the connoisseur's first bite." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1607301406259-dfb186e15de8?w=500&h=400&fit=crop&q=80" alt="Akami" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Akami</h3><span class="text-[11px] text-dl/60 font-serif">赤身</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€9</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Lean ruby tuna loin, zuke soy-marinated.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="nigiri" data-name="Uni" data-jp="雲丹" data-price="€16 / pc" data-img="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=700&h=420&fit=crop&q=80" data-detail="Hokkaido Bafun sea urchin, sweet and oceanic, spooned over warm shari and bound with a band of nori. Available only when the day's catch meets our grade." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=500&h=400&fit=crop&q=80" alt="Uni" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bp absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">Signature</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Uni</h3><span class="text-[11px] text-dl/60 font-serif">雲丹</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€16</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Hokkaido Bafun sea urchin — sweet, oceanic, fleeting.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="nigiri" data-name="Hotate" data-jp="帆立" data-price="€11 / pc" data-img="https://images.unsplash.com/photo-1606820854416-439b3305ff39?w=700&h=420&fit=crop&q=80" data-detail="Live Hokkaido scallop, sliced moments before serving. Faintly sweet, almost translucent, with a whisper of yuzu salt." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1606820854416-439b3305ff39?w=500&h=400&fit=crop&q=80" alt="Hotate" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Hotate</h3><span class="text-[11px] text-dl/60 font-serif">帆立</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€11</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Live Hokkaido scallop, yuzu salt, sliced to order.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="nigiri" data-name="Unagi" data-jp="鰻" data-price="€12 / pc" data-img="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&h=420&fit=crop&q=80" data-detail="Freshwater eel, grilled over binchōtan and lacquered in a tare reduced for three days. Warm, smoky, faintly caramelised." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&h=400&fit=crop&q=80" alt="Unagi" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Unagi</h3><span class="text-[11px] text-dl/60 font-serif">鰻</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€12</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Binchōtan-grilled eel, three-day tare lacquer.</p>
+      </div>
+    </div>
+
+    <!-- ===== SASHIMI ===== -->
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="sashimi" data-name="Bluefin Trio" data-jp="鮪三種" data-price="€34" data-img="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=700&h=420&fit=crop&q=80" data-detail="A vertical tasting of one fish — ōtoro, chūtoro and akami, plated from richest to leanest so you read the whole tuna in three slices." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=500&h=400&fit=crop&q=80" alt="Bluefin Trio" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bc absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">Chef's Pick</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Bluefin Trio</h3><span class="text-[11px] text-dl/60 font-serif">鮪三種</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€34</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Ōtoro, chūtoro, akami — the whole tuna in three slices.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="sashimi" data-name="Sake" data-jp="鮭" data-price="€16" data-img="https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?w=700&h=420&fit=crop&q=80" data-detail="Ora King salmon from New Zealand, prized for its silken fat lines. Cut thick, served with fresh wasabi and a single drop of citrus." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?w=500&h=400&fit=crop&q=80" alt="Sake" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Sake</h3><span class="text-[11px] text-dl/60 font-serif">鮭</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€16</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Ora King salmon, silken-fatted, cut thick.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="sashimi" data-name="Tako" data-jp="蛸" data-price="€14" data-img="https://images.unsplash.com/photo-1602253057119-44d745d9b860?w=700&h=420&fit=crop&q=80" data-detail="Octopus massaged and slow-poached for tenderness, then chilled. Clean, springy, lightly brined — a study in texture." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1602253057119-44d745d9b860?w=500&h=400&fit=crop&q=80" alt="Tako" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Tako</h3><span class="text-[11px] text-dl/60 font-serif">蛸</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€14</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Slow-poached octopus, springy and clean.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="sashimi" data-name="Tai" data-jp="鯛" data-price="€17" data-img="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&h=420&fit=crop&q=80" data-detail="Sea bream cured briefly between sheets of kombu, which draws out water and presses umami into the flesh. Delicate, floral, precise." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=400&fit=crop&q=80" alt="Tai" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Tai</h3><span class="text-[11px] text-dl/60 font-serif">鯛</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€17</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Kombu-cured sea bream — delicate, floral, precise.</p>
+      </div>
+    </div>
+
+    <!-- ===== MAKI ===== -->
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="maki" data-name="Purple Dragon Roll" data-jp="紫龍巻" data-price="€26" data-img="https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=700&h=420&fit=crop&q=80" data-detail="Our namesake. Binchōtan eel and ōtoro at the core, draped in violet shiso and finished with a single leaf of edible gold. The dish the house is named for." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=500&h=400&fit=crop&q=80" alt="Purple Dragon Roll" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bp absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">Signature</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Purple Dragon Roll</h3><span class="text-[11px] text-dl/60 font-serif">紫龍巻</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€26</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Eel, ōtoro, violet shiso, gold leaf — the namesake.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="maki" data-name="Spicy Tuna Maki" data-jp="辛鮪巻" data-price="€15" data-img="https://images.unsplash.com/photo-1553621042-f6e147245754?w=700&h=420&fit=crop&q=80" data-detail="Hand-minced akami bound with our own fermented chili oil and a thread of scallion. Heat that builds slowly, never masking the fish." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=500&h=400&fit=crop&q=80" alt="Spicy Tuna Maki" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Spicy Tuna Maki</h3><span class="text-[11px] text-dl/60 font-serif">辛鮪巻</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€15</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Minced akami, house fermented chili oil, scallion.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="maki" data-name="Toro Negi" data-jp="トロ葱巻" data-price="€19" data-img="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=700&h=420&fit=crop&q=80" data-detail="Fatty tuna scraped from the bone, folded with raw scallion and rolled tight. Rich and savoury, the classic Edomae pairing." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=500&h=400&fit=crop&q=80" alt="Toro Negi" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Toro Negi</h3><span class="text-[11px] text-dl/60 font-serif">トロ葱巻</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€19</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Fatty tuna and raw scallion, the Edomae classic.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="maki" data-name="Kappa Maki" data-jp="河童巻" data-price="€8" data-img="https://images.unsplash.com/photo-1589187151053-5ec8818e661b?w=700&h=420&fit=crop&q=80" data-detail="The palate-cleanser. Crisp Japanese cucumber, toasted sesame, nothing more. Served between richer courses to reset the tongue." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1589187151053-5ec8818e661b?w=500&h=400&fit=crop&q=80" alt="Kappa Maki" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Kappa Maki</h3><span class="text-[11px] text-dl/60 font-serif">河童巻</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€8</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Crisp cucumber and toasted sesame — the cleanser.</p>
+      </div>
+    </div>
+
+    <!-- ===== GUNKAN ===== -->
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="gunkan" data-name="Uni Gunkan" data-jp="雲丹軍艦" data-price="€17" data-img="https://images.unsplash.com/photo-1564489563601-c53cfc451e93?w=700&h=420&fit=crop&q=80" data-detail="A 'battleship' of nori cradling a generous spoon of Hokkaido uni over warm rice — the most direct way to taste the urchin at its sweetest." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1564489563601-c53cfc451e93?w=500&h=400&fit=crop&q=80" alt="Uni Gunkan" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bc absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">Chef's Pick</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Uni Gunkan</h3><span class="text-[11px] text-dl/60 font-serif">雲丹軍艦</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€17</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Nori battleship brimming with Hokkaido sea urchin.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="gunkan" data-name="Ikura Gunkan" data-jp="いくら軍艦" data-price="€13" data-img="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=700&h=420&fit=crop&q=80" data-detail="Salmon roe cured in our house dashi-soy until each pearl bursts with clean, briny sweetness. Brightened with a rasp of yuzu zest." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=500&h=400&fit=crop&q=80" alt="Ikura Gunkan" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Ikura Gunkan</h3><span class="text-[11px] text-dl/60 font-serif">いくら軍艦</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€13</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Dashi-soy cured salmon roe, yuzu zest.</p>
+      </div>
+    </div>
+
+    <!-- ===== TEA ===== -->
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="tea" data-name="Ceremonial Matcha" data-jp="抹茶" data-price="€9" data-img="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?w=700&h=420&fit=crop&q=80" data-detail="Stone-ground Uji matcha, whisked tableside to a jade foam. Vegetal, umami-rich, with a long sweet finish — the traditional close to the meal." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?w=500&h=400&fit=crop&q=80" alt="Ceremonial Matcha" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bc absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">Chef's Pick</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Ceremonial Matcha</h3><span class="text-[11px] text-dl/60 font-serif">抹茶</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€9</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Stone-ground Uji matcha, whisked to a jade foam.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="tea" data-name="Gyokuro" data-jp="玉露" data-price="€11" data-img="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=700&h=420&fit=crop&q=80" data-detail="Shade-grown 'jewel dew' green tea, steeped low and slow at 50°C. Intensely sweet and brothy, almost savoury — the most prized leaf in Japan." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=500&h=400&fit=crop&q=80" alt="Gyokuro" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Gyokuro</h3><span class="text-[11px] text-dl/60 font-serif">玉露</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€11</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Shade-grown green tea, sweet and brothy.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="tea" data-name="Sencha" data-jp="煎茶" data-price="€6" data-img="https://images.unsplash.com/photo-1545048702-79362596cdc9?w=700&h=420&fit=crop&q=80" data-detail="First-flush Shizuoka sencha — bright, grassy and clean, with a crisp astringency that cuts through richer courses." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1545048702-79362596cdc9?w=500&h=400&fit=crop&q=80" alt="Sencha" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Sencha</h3><span class="text-[11px] text-dl/60 font-serif">煎茶</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€6</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">First-flush Shizuoka — bright, grassy, clean.</p>
+      </div>
+    </div>
+
+    <!-- ===== BEER ===== -->
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="beer" data-name="Asahi Super Dry" data-jp="アサヒ" data-price="€7" data-img="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=700&h=420&fit=crop&q=80" data-detail="Japan's iconic karakuchi lager — crisp, dry and clean-finishing. Poured cold, it resets the palate between cuts of fish." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500&h=400&fit=crop&q=80" alt="Asahi Super Dry" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Asahi Super Dry</h3><span class="text-[11px] text-dl/60 font-serif">アサヒ</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€7</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Iconic karakuchi lager — crisp, dry, clean.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="beer" data-name="Sapporo Premium" data-jp="サッポロ" data-price="€7" data-img="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=700&h=420&fit=crop&q=80" data-detail="The oldest beer brand in Japan. Fuller-bodied with a faint malt sweetness and a refined bitter finish." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500&h=400&fit=crop&q=80" alt="Sapporo Premium" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Sapporo Premium</h3><span class="text-[11px] text-dl/60 font-serif">サッポロ</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€7</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Japan's oldest brand — fuller-bodied, refined finish.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="beer" data-name="Hitachino Nest White" data-jp="常陸野" data-price="€9" data-img="https://images.unsplash.com/photo-1518176258769-f227c798150e?w=700&h=420&fit=crop&q=80" data-detail="A Japanese witbier brewed with coriander, orange peel and nutmeg. Aromatic and lightly spiced — our craft pick for the adventurous." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1518176258769-f227c798150e?w=500&h=400&fit=crop&q=80" alt="Hitachino Nest White" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bn absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">New</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Hitachino Nest White</h3><span class="text-[11px] text-dl/60 font-serif">常陸野</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€9</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Japanese witbier — coriander, orange peel, nutmeg.</p>
+      </div>
+    </div>
+
+    <!-- ===== LEMONADE ===== -->
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="lemonade" data-name="Yuzu Ramune" data-jp="柚子ラムネ" data-price="€5" data-img="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=700&h=420&fit=crop&q=80" data-detail="The classic marble-stoppered Japanese soda, made with fragrant yuzu. Bright, citrusy and barely sweet — and yes, you pop the marble yourself." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=500&h=400&fit=crop&q=80" alt="Yuzu Ramune" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+        <span class="bn absolute top-3 left-3 text-[9px] font-bold tracking-[.15em] uppercase px-2.5 py-1 rounded-full">New</span>
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Yuzu Ramune</h3><span class="text-[11px] text-dl/60 font-serif">柚子ラムネ</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€5</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Marble-stoppered yuzu soda — bright and barely sweet.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="lemonade" data-name="Original Ramune" data-jp="ラムネ" data-price="€5" data-img="https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=700&h=420&fit=crop&q=80" data-detail="The original lemon-lime ramune — nostalgic, fizzy and clean. A nod to a summer festival in a glass bottle." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=500&h=400&fit=crop&q=80" alt="Original Ramune" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Original Ramune</h3><span class="text-[11px] text-dl/60 font-serif">ラムネ</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€5</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">The original lemon-lime ramune — nostalgic and fizzy.</p>
+      </div>
+    </div>
+
+    <div class="mc rv rounded-2xl border border-white/5 bg-card cursor-pointer" tabindex="0" role="button" aria-haspopup="dialog" data-cat="lemonade" data-name="Calpis Soda" data-jp="カルピス" data-price="€5" data-img="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=700&h=420&fit=crop&q=80" data-detail="Sparkling cultured-milk soda — softly tangy, milky-sweet and utterly refreshing. A Japanese childhood favourite for grown-up palates." onclick="openDish(this)">
+      <div class="h-44 overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=500&h=400&fit=crop&q=80" alt="Calpis Soda" loading="lazy" decoding="async" class="ci w-full h-full object-cover" onload="this.classList.add('ld')">
+      </div>
+      <div class="p-5">
+        <div class="flex justify-between items-start gap-2"><div><h3 class="font-display font-bold text-lg leading-tight">Calpis Soda</h3><span class="text-[11px] text-dl/60 font-serif">カルピス</span></div><span class="text-gold font-display font-bold whitespace-nowrap">€5</span></div>
+        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Sparkling cultured-milk soda — tangy and milky-sweet.</p>
+      </div>
+    </div>
+
+  </div>
+  <p id="empty" class="hidden text-center text-gray-600 font-light py-20">Nothing in this category yet.</p>
+</section>
+
+<!-- NOTE -->
+<section class="px-6 pb-20">
+  <div class="max-w-3xl mx-auto text-center rv">
+    <div class="divider mb-8"></div>
+    <p class="text-sm text-gray-600 font-light leading-relaxed">À la carte is served alongside the counter omakase. For the full 20-course journey, the chef selects each piece for you — reserve a seat to experience it.</p>
+    <a href="index.html#reserve" class="cta-g mt-6 inline-block px-9 py-3.5 rounded-full"><span class="text-[11px] font-bold tracking-[.2em] uppercase text-black">Reserve a Table</span></a>
+    <p class="text-[10px] text-gray-700 mt-5">Prices in EUR, incl. VAT. Availability follows the daily catch — some items may not be offered every evening.</p>
+  </div>
+</section>
+
+<!-- DISH MODAL -->
+<div id="dishModal" role="dialog" aria-modal="true" aria-labelledby="mName" aria-describedby="mDesc" class="mo fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/80 backdrop-blur-md" onclick="if(event.target===this)closeDish()">
+  <div class="mb max-w-lg w-full bg-card border border-dp/20 rounded-3xl overflow-hidden relative">
+    <button onclick="closeDish()" aria-label="Close" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 border border-white/10 flex items-center justify-center hover:bg-dp/20 transition-colors"><span class="iconify text-lg" data-icon="mdi:close"></span></button>
+    <img id="mImg" src="" alt="" class="w-full h-60 object-cover">
+    <div class="p-7">
+      <div class="flex justify-between items-start gap-3">
+        <div><h3 id="mName" class="text-2xl font-display font-bold"></h3><span id="mJp" class="font-serif text-dl/60"></span></div>
+        <span id="mPrice" class="text-xl font-display font-bold gs whitespace-nowrap"></span>
+      </div>
+      <p id="mDesc" class="text-sm text-gray-400 mt-4 leading-relaxed"></p>
+      <a href="index.html#reserve" class="cta-g mt-7 inline-block px-7 py-3 rounded-full"><span class="text-[11px] font-bold tracking-[.2em] uppercase text-black">Reserve to Taste</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-12 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full border border-dp/40 flex items-center justify-center"><span class="font-serif text-dp text-lg">龍</span></div>
+      <span class="text-sm font-bold tracking-[.25em] uppercase">Purple Dragon</span>
+    </a>
+    <p class="text-[11px] text-gray-700">Brüsseler Platz 7, 50672 Cologne · +49 221 123 4567</p>
+    <p class="text-[11px] text-gray-800 font-serif">「魚を食うは命を食う」</p>
+  </div>
+</footer>
+
+<script>
+// Nav scroll + sticky tabbar shadow once it pins
+const nav=document.getElementById('nav');
+const tabbar=document.getElementById('tabbar');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('nav-scrolled',scrollY>80);
+  tabbar.classList.toggle('scrim',tabbar.getBoundingClientRect().top<=1);
+});
+
+// Scroll reveal
+function rv(){document.querySelectorAll('.rv').forEach(e=>{if(e.getBoundingClientRect().top<innerHeight-60)e.classList.add('a')})}
+addEventListener('scroll',rv);addEventListener('load',rv);
+
+// ===== Tab filter — animated + accessible tablist =====
+const grid=document.getElementById('grid');
+const cards=[...grid.querySelectorAll('.mc')];
+const tabs=[...document.querySelectorAll('.ct')];
+const countEl=document.getElementById('count');
+const emptyEl=document.getElementById('empty');
+
+function applyFilter(cat){
+  let shown=0;
+  cards.forEach(card=>{
+    const ok=cat==='all'||card.dataset.cat===cat;
+    if(ok){
+      if(card.style.display==='none')card.style.display='';
+      card.style.transitionDelay=(shown*25)+'ms';
+      requestAnimationFrame(()=>card.classList.remove('hide'));
+      shown++;
+    }else{
+      card.style.transitionDelay='0ms';
+      card.classList.add('hide');
+      setTimeout(()=>{if(card.classList.contains('hide'))card.style.display='none';},300);
+    }
+  });
+  emptyEl.classList.toggle('hidden',shown>0);
+  countEl.textContent=shown+(shown===1?' dish':' dishes');
+  rv();
+}
+function selectTab(tab){
+  tabs.forEach(t=>{const on=t===tab;t.classList.toggle('active',on);t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;});
+  applyFilter(tab.dataset.cat);
+}
+tabs.forEach((tab,i)=>{
+  tab.tabIndex=tab.classList.contains('active')?0:-1;
+  tab.addEventListener('click',()=>selectTab(tab));
+  tab.addEventListener('keydown',e=>{
+    let n=-1;
+    if(e.key==='ArrowRight')n=(i+1)%tabs.length;
+    else if(e.key==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;
+    else if(e.key==='Home')n=0;
+    else if(e.key==='End')n=tabs.length-1;
+    if(n>=0){e.preventDefault();tabs[n].focus();selectTab(tabs[n]);}
+  });
+});
+countEl.textContent=cards.length+' dishes';
+
+// ===== Dish modal — accessible dialog =====
+const modal=document.getElementById('dishModal');
+const closeBtn=modal.querySelector('button');
+let lastFocused=null;
+function openDish(el){
+  lastFocused=el;
+  const img=document.getElementById('mImg');
+  img.classList.remove('ld');img.onload=()=>img.classList.add('ld');
+  img.src=el.dataset.img;img.alt=el.dataset.name;
+  document.getElementById('mName').textContent=el.dataset.name;
+  document.getElementById('mJp').textContent=el.dataset.jp;
+  document.getElementById('mPrice').textContent=el.dataset.price;
+  document.getElementById('mDesc').textContent=el.dataset.detail;
+  modal.classList.add('open');document.body.style.overflow='hidden';
+  closeBtn.focus();
+}
+function closeDish(){
+  modal.classList.remove('open');document.body.style.overflow='';
+  if(lastFocused){lastFocused.focus();lastFocused=null;}
+}
+// open a card with Enter/Space (cards are role=button, tabindex 0)
+grid.addEventListener('keydown',e=>{
+  if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('mc')){e.preventDefault();openDish(e.target);}
+});
+// Esc to close + focus trap inside the dialog
+modal.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeDish();return;}
+  if(e.key==='Tab'){
+    const f=modal.querySelectorAll('button,a[href]');
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+</script>
+</body>
+</html>
